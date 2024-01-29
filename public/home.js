@@ -17,17 +17,13 @@ try{
    const returnedItem = await sendItem.json()
    console.log(returnedItem)
 
-  
-   for (const thing of returnedItem) {
-
+   const newitem = returnedItem [returnedItem.length-1];
     const li = document.createElement("li");
-    const node = document.createTextNode(`${thing}`);
-    li.appendChild(node)
+    const node = document.createTextNode(newitem);
+        li.appendChild(node)
     items.appendChild(li);
 
-   }
-
-} catch(e) {
+   } catch(e) {
     console.log(e)
 }
 
